@@ -1,6 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-[80vh] flex flex-col items-center justify-center bg-gray-100 text-center px-6">
 
@@ -13,7 +17,10 @@ function Home() {
         Fast, responsive and user-friendly design.
       </p>
 
-      <button className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition">
+      <button
+        onClick={() => navigate("/login")}
+        className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition"
+      >
         Get Started
       </button>
 
